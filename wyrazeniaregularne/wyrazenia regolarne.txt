@@ -1,0 +1,39 @@
+
+2.1
+^ - początek lini
+$ - koniec lini
+\A - początek liki (PHP)
+\z - koniec lini (PHP)
+
+2.2
+{2}-{3} - długość wyrażenia 66-400
+{2,4} AD,ZAW,Prog
+? - 0/1 znak
+* - 0 lub więcej wystąpień
++ - 1 lub więcej
+. - 1 znak (dowolny)
+
+2.3
+[0-9], \d - znajdź same cyfry
+
+2.4
+[a-z], \D - znajdź małe litery (nei obsługuje znaków specialnuch ę,ą,ó)
+[A-Z] - znajdź duże litery
+\w - 
+\W - 
+\b -
+
+2.5
+\s \t (tabulator)\r (return)\n (newline) - znaki białe
+\S - non withe space characters
+\D -
+
+2.6
+(\d+)-(\d{3}) - grupowanie (66) (400)
+(4|5) - znajdź 4 lub 5
+
+2.7
+?, *, +, ., ^, $, \d, {}, [], {}
+
+\d - wyczukanie cyfry
+\\d - wyszukanie \d
