@@ -1,0 +1,32 @@
+1. 
+"([/])([a-z]+-[a-z]{2,4})([/])([\d]+)([/])([1-5][a-zA-Z]{2}[4,5])"
+
+/course-zaw/22/3pt4
+/resource-ai/13/3pt4
+/course-prog/22/3pt4
+/course-prog/22/p3t4
+/course-prog/ss/3pt4
+/course-prog/2x2/p3t4
+/course-prog/22/3pt4
+/courds-prog/22/3pt4
+
+2. 
+"([1-5][a-zA-Z]{2}[4,5])-([a-zA-Z]{2,4})-([a-zA-Z]+-[a-zA-Z]+)"
+
+
+
+
+if(number<10):
+     number = str(number)
+     out = '000' + number
+elif(number < 100):
+     number = str(number)
+     out = '00' + number
+elif(number < 1000):
+     number = str(number)
+     out = '0' + number
+else:
+    number = str(number)
+    out = number
+
+print(out)
