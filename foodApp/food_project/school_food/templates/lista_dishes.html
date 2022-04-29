@@ -1,0 +1,36 @@
+
+{% block content %}
+<h1>Lista użytkowników</h1>
+{% include 'toolbar.html' %}
+<hr>
+<table border="1">
+    <tr>
+        <th>
+            Lp.
+        </th>
+        <th>
+            Nazwa
+        </th>
+        <th>
+            Opis
+        </th>
+        <th>
+            Cena
+        </th>
+        <th>
+            Kategoria
+        </th>
+    </tr>
+    {% for item in dishes %}
+    <tr class="{% cycle 'odd' 'even' %}">
+        <td>{{ forloop.counter }}</td>
+        <td>{{ item.nazwa }}</td>
+        <td>{{ item.opis }}</td>
+        <td>{{ item.cena }}</td>
+        <td>{{ item.kategoria }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}

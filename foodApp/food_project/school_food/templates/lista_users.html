@@ -1,0 +1,40 @@
+
+{% block content %}
+<h1>Lista użytkowników</h1>
+{% include 'toolbar.html' %}
+<hr>
+<table border="1">
+    <tr>
+        <th>
+            Lp.
+        </th>
+        <th>
+            Nazwisko
+        </th>
+        <th>
+            Imie
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Utworzono
+        </th>
+        <th>
+            Opis
+        </th>
+    </tr>
+    {% for item in users %}
+    <tr class="{% cycle 'odd' 'even' %}">
+        <td>{{ forloop.counter }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.surname }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.create_time }}</td>
+        <td>{{ item.desc }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}
