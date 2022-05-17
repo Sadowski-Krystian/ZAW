@@ -1,5 +1,6 @@
 from django.db import models
-
+from django.conf import settings
+from django.utils import timezone
 # class Klienci(models.Model):
 #     numer_legitymacj = models.CharField(max_length=10)
 #     sposob_dostawy = models.IntegerField()
@@ -16,6 +17,14 @@ from django.db import models
 #     id_zamowienia = models.ForeignKey(Zamowienia)
 #     id_dania = models.ForeignKey(Dania)
 
+class Post(models.Model):
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    text = models.TextField()
+    created_date = models.DateTimeField(
+            default=timezone.now)
+    published_date = models.DateTimeField(
+            blank=True, null=True)
 
 class Klienci(models.Model):
     id_klienta = models.IntegerField(max_length=8)
